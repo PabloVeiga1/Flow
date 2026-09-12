@@ -1,4 +1,4 @@
-const API_BASE = "/api"
+const API_BASE = import.meta.env.PROD ? "https://flow-84k1.vercel.app" : "/api"
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE}${path}`, {
